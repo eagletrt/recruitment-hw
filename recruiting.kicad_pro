@@ -359,7 +359,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "template.kicad_pro",
+    "filename": "recruiting.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -440,6 +440,10 @@
     [
       "bdc7face-9f7c-4701-80bb-4cc144448db1",
       ""
+    ],
+    [
+      "3da410dd-bdad-4384-9ad6-7a718e521e4a",
+      "Buck controller"
     ]
   ],
   "text_variables": {}
