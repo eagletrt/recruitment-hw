@@ -1898,7 +1898,7 @@
       (reference "Cout1") (unit 1) (value "68 nF") (footprint "Capacitor_SMD:C_1206_3216Metric")
     )
     (path "/1dd7e11e-43e2-490d-b80a-72ae7a1e8bc8/4fe7dcea-f31c-4180-a717-fa25ae1912d8"
-      (reference "Creg1") (unit 1) (value "0,1 uF") (footprint "Capacitor_SMD:C_01005_0402Metric")
+      (reference "Creg1") (unit 1) (value "0,1 uF") (footprint "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder")
     )
     (path "/3da410dd-bdad-4384-9ad6-7a718e521e4a/69017d79-7854-4265-9d8c-0e9ec7f26451"
       (reference "Cvcc1") (unit 1) (value "0,47 uF") (footprint "Capacitor_SMD:C_0402_1005Metric")

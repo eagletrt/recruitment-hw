@@ -798,7 +798,7 @@
     (uuid 4fe7dcea-f31c-4180-a717-fa25ae1912d8)
     (property "Reference" "Creg1" (id 0) (at 67.945 59.69 90))
     (property "Value" "0,1 uF" (id 1) (at 67.945 62.23 90))
-    (property "Footprint" "Capacitor_SMD:C_01005_0402Metric" (id 2) (at 71.755 65.7098 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" (id 2) (at 71.755 65.7098 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 67.945 66.675 0)
