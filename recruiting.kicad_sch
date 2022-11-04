@@ -821,6 +821,9 @@
     (path "/306a509e-50bd-44af-bfcf-f9a97fc2db20"
       (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
     )
+    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/7a4bbde4-2408-4f88-be7f-f017bee2baf1"
+      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
     (path "/7ffe2b9b-24ff-42b5-bf10-4934e12679ab"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
@@ -833,11 +836,14 @@
     (path "/a007cd87-15b7-457e-af73-7604d076d44d"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
-    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/a77610f3-304c-48b1-886a-469d94e68c4d"
+    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/bb87a798-564e-43dd-adc6-ff614b89f841"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
     (path "/c80a1b4b-b02a-470c-b16e-58d040aa8e90"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/ccffb395-bb72-4b49-94ce-d8e441859e66"
+      (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
     )
     (path "/cfe10c78-1dbd-4f6d-b9ac-98863c462fc1"
       (reference "#PWR?") (unit 1) (value "VCC") (footprint "")
@@ -845,14 +851,20 @@
     (path "/5deeffbc-8794-484a-b2a5-e3cc590e7a88"
       (reference "D?") (unit 1) (value "LED") (footprint "")
     )
-    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/825a3286-cc53-435b-a3de-6b011878b1a1"
-      (reference "R?") (unit 1) (value "R") (footprint "")
+    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/1e2fc46d-e776-4dc1-9536-d4f0e74d01c3"
+      (reference "R?") (unit 1) (value "7.5k") (footprint "")
+    )
+    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/692a3bcf-0de2-4486-acae-c61e8e3909df"
+      (reference "R?") (unit 1) (value "500k") (footprint "")
     )
     (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/865134ad-51b8-46da-b378-f0866e75c713"
-      (reference "R?") (unit 1) (value "R") (footprint "")
+      (reference "R?") (unit 1) (value "1") (footprint "")
     )
     (path "/aa344f91-1f3b-4c24-9a52-fc60512b7222"
       (reference "R?") (unit 1) (value "R") (footprint "")
+    )
+    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/3aaefd01-c336-4933-8f29-96bda986752e"
+      (reference "U?") (unit 1) (value "LM741") (footprint "")
     )
     (path "/9f55fb12-5697-4d82-b926-9f18bd01e6e4"
       (reference "U?") (unit 1) (value "ATA00F18S-L") (footprint "Converter_DCDC:Converter_DCDC_Artesyn_ATA_SMD")
