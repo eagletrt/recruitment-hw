@@ -799,13 +799,13 @@
       (effects (font (size 1.27 1.27)) (justify left))
       (uuid 4256d976-1328-4ce0-a5f9-b05977a83c07)
     )
-    (pin "Over_10W" output (at 59.69 124.46 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 1e954100-0637-4c40-93c6-32dfed913a9a)
-    )
     (pin "Vout" output (at 59.69 118.11 0)
       (effects (font (size 1.27 1.27)) (justify right))
       (uuid cb542094-bd0a-4df7-a1a0-d572dec1f007)
+    )
+    (pin "LED_5V" output (at 59.69 124.46 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid d94c7eb9-591e-4ddc-973d-86c4a77ce2fb)
     )
   )
 
@@ -815,10 +815,16 @@
   )
 
   (symbol_instances
+    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/123f9bd7-b417-48c1-a3bd-643d0259a1d8"
+      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
     (path "/292b3c4b-430f-4d2d-ae90-e3215e708635"
       (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
     )
     (path "/306a509e-50bd-44af-bfcf-f9a97fc2db20"
+      (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/5fc5051b-98a7-4d88-8294-669ee836a434"
       (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
     )
     (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/7a4bbde4-2408-4f88-be7f-f017bee2baf1"
@@ -827,7 +833,13 @@
     (path "/7ffe2b9b-24ff-42b5-bf10-4934e12679ab"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
+    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/82e7c523-3cb1-493d-ac97-b17655d4401e"
+      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
     (path "/8ad29919-1b9d-4601-824e-ca02695fe1aa"
+      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/923371cf-3152-4711-8cdc-610f94ad672a"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
     (path "/94058bb9-a9c5-417f-9369-c8bb75c1cf27"
@@ -848,11 +860,23 @@
     (path "/cfe10c78-1dbd-4f6d-b9ac-98863c462fc1"
       (reference "#PWR?") (unit 1) (value "VCC") (footprint "")
     )
+    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/3dab94da-78c1-4b60-b17a-27168d8560b6"
+      (reference "C?") (unit 1) (value "2u") (footprint "")
+    )
+    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/c3ef91fc-5db5-4183-9b06-dab0bcba96df"
+      (reference "C?") (unit 1) (value "100n") (footprint "")
+    )
     (path "/5deeffbc-8794-484a-b2a5-e3cc590e7a88"
       (reference "D?") (unit 1) (value "LED") (footprint "")
     )
     (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/1e2fc46d-e776-4dc1-9536-d4f0e74d01c3"
       (reference "R?") (unit 1) (value "7.5k") (footprint "")
+    )
+    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/53dde44d-8874-4f48-b115-15c8cc3b3ae2"
+      (reference "R?") (unit 1) (value "100k") (footprint "")
+    )
+    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/563e3349-e5e5-4008-9bec-351c0aefd24a"
+      (reference "R?") (unit 1) (value "1k") (footprint "")
     )
     (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/692a3bcf-0de2-4486-acae-c61e8e3909df"
       (reference "R?") (unit 1) (value "500k") (footprint "")
@@ -865,6 +889,9 @@
     )
     (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/3aaefd01-c336-4933-8f29-96bda986752e"
       (reference "U?") (unit 1) (value "LM741") (footprint "")
+    )
+    (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/6951b5f1-5326-42c8-b023-e331ee710437"
+      (reference "U?") (unit 1) (value "NE555P") (footprint "Package_DIP:DIP-8_W7.62mm")
     )
     (path "/9f55fb12-5697-4d82-b926-9f18bd01e6e4"
       (reference "U?") (unit 1) (value "ATA00F18S-L") (footprint "Converter_DCDC:Converter_DCDC_Artesyn_ATA_SMD")
