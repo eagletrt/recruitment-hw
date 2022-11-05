@@ -721,7 +721,7 @@
     (property "Reference" "R?" (id 0) (at 76.708 129.9753 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (id 1) (at 76.708 132.5122 0)
+    (property "Value" "470" (id 1) (at 76.708 132.5122 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "" (id 2) (at 73.152 130.81 90)
@@ -885,7 +885,7 @@
       (reference "R?") (unit 1) (value "1") (footprint "")
     )
     (path "/aa344f91-1f3b-4c24-9a52-fc60512b7222"
-      (reference "R?") (unit 1) (value "R") (footprint "")
+      (reference "R?") (unit 1) (value "470") (footprint "")
     )
     (path "/7f2f48d1-9a93-4c33-8b0a-340d492711ab/3aaefd01-c336-4933-8f29-96bda986752e"
       (reference "U?") (unit 1) (value "LM741") (footprint "")
