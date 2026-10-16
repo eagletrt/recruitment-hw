@@ -1,0 +1,20 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid bdc7face-9f7c-4701-80bb-4cc144448db1)
+
+  (paper "A4")
+
+  (title_block
+    (title "Task 3 - Precharge controller")
+    (rev "V0")
+    (company "E-Agle TRT")
+  )
+
+  (lib_symbols)
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+
+  (symbol_instances)
+)

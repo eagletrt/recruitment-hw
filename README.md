@@ -1,71 +1,41 @@
-# Recruitment for E-Agle TRT | Electronics division
+**Recruitment for E-Agle TRT | Electronics division**
 
-Welcome to the recruitment _test_ for the electronics team of E-Agle Trento Racing Team.
+Welcome to the recruitment *test* for the electronics team of E-Agle Trento Racing Team.
 
-This _test_ is meant to give us the possibility to have a first understanding of the capabilities of our applicants without them having the pressure of seeing it as an exam.
+This test gives us an initial understanding of applicants' abilities without the pressure of a formal exam.
 
-Moreover it's studied so that the applicants get a first taste of the tools used, so that once in the team, they can get up and running quickly into the team's workflow without having to learn stuff under pressure when it's needed.
+It also introduces you to the tools we use, so you can get up to speed with the team's workflow before you need to use them under pressure.
 
-## What we'll look into
+You will be assigned a task after our first meeting, during which we introduce the team and the electronics division. **Do not start until we tell you to.**
 
- - Understanding of basic electronics
- - Components choice and their suitability
- - KiCad
-   - Schematic choices, tidyness and good practices
-   - Board layout understanding and, again, good practices
- - `git` usage: fork, branch, clone, commit, push, pull
- - Not only _tecnical correctness_ but also actual usability.
+To better understand the task and the competition's structure, we strongly recommend reading the latest rulebook, available on the [Formula Student Germany rules page](https://www.formulastudent.de/fsg/rules).
 
-## Assignment
+**What we'll look into**
 
-Develop an overcurrent monitoring system (**monitor**) to perform plauysibility checks of a secondary system (**load**).
+- Schematic quality: clear connections, consistent labels, tidy organisation into functional blocks and good KiCad practices.
+- Circuit correctness: operation that meets the requirements, suitable components and calculations that support the design.
+- Technical reasoning: clear explanations of the circuit architecture, component choices and sizing that demonstrate your understanding.
+- Documentation quality: clear and complete explanations, calculations and verification, consistent with the submitted schematic.
+- `git` usage: fork, branch, clone, commit, push, pull.
 
-### Overview
-The **monitor** has the following specs:
-- It is supplied by an unstable DC voltage line, ranging from 9V to 17V
-- Has a normally open relay connected in series with the load
-- Has a hall effect sensor that measures the current through the load
+**General instructions**
 
-The **load** has the following specs:
-- Voltage range: $24[V] \div 48[V]$
-- Current range: $-3[A] \div 25[A]$
+- You may use AI tools to help you understand concepts, but you must design the circuit, draw the schematic, carry out the calculations and write the documentation yourself. Any submitted work found to be AI-generated, or that you cannot explain when asked, will result in disqualification and your application will not be considered. Practices that demonstrate your authorship, such as meaningful progress commits and notes explaining your design decisions, will be appreciated.
+- Create a repository on your GitHub account and copy this project into it. If you do not have an account, create one. **Do not clone this repository!**
+- Use the existing KiCad project for your assigned task as a starting point, or create a new one.
+- Create a branch named `name_surname` from `master` and commit your progress on that branch.
+- Commit your progress throughout the assignment. **Do not commit only the finished project.**
+- When you are done, export the schematic inside `docs/`.
+- Export a bill of materials (BOM) from KiCad as a CSV file inside `docs/`. Include component references, quantities, values, manufacturers, manufacturer part numbers and Mouser part numbers or product links.
+- Include a short explanation of the circuit, component choices and calculations inside `docs/`, together with annotated timing diagrams or simulations covering the operating cases required by your assigned task. Simulations are not mandatory; explain how the schematic produces the expected behaviour.
+- If you also design a PCB, export the production Gerber files inside `output/`.
+- If you have not already done so, submit your [application form](https://eagletrt.it/apply).
+- If you have questions, contact [electronics@eagletrt.it](mailto:electronics@eagletrt.it).
+- You can also visit our lab on floor -2 of Povo 2 if we are slow to reply.
+- You have **2 weeks (14 days)** to work on this project. **This is a firm deadline; meeting it is part of the assessment.**
 
-### Specs
-The **monitor** must ensure that the relay is open if the power obsorbed by the **load** is above $500[W]$.
-Once open, it must not be possible to close the relay unless the **monitor** is power cycled.
+**Links**
 
-No programmable logic is allowed.
-
-The Hall effect based sensor can be chosen from the _Allegro ACS781xLR_ family of devices. Other sensors may be used as long as the specs are met and equivalency is proven.
-
-Below you can find a general diagram of the system
-
-<p align="center">
-<img src=".\general-diagram.png" width="400">
-</p>
-
-## KiCad instructions
-- In the schematic use also a hierarchical sheet
-  - _It's not a good practice for such a small project, but it's for letting you learn about hierarchy without the hassle of a more complex assignment_
-
-- Add comments for the necessary calculations of values
-
-- Consider JLC PCB as the board manufacturer
-
-## General instructions
-
- - Create a repository on your GitHub account (if you don't have it, create one) and copy this project in it. **Do not clone this repository!**
- - Branch the master into one called `name_surname` and commit your progress in this branch
- - Commit your progress along the way. **Do not commit just the finished project**, use Git for what it's made for!
- - When you are done, generate the schematic output inside `docs/` and the production (gerber) files in `output/`
- - If you haven't already, submit your application form [here](https://eagletrt.it/apply)
- - If you have any questions feel free to contact us at [electronics@eagletrt.it](mailto:electronics@eagletrt.it)
- - Feel free to also come to our lab (Povo 2 floor -2) if we are slow at replying
- - You have **2 weeks** (14 days) to work on this project (**This is a hard deadline and we evaluate if you meet deadlines**)
-
-## Links
-:globe_with_meridians: [Website](https://www.eagletrt.it)
-
-:iphone: [Instagram](https://www.instagram.com/eagletrt)
-
-:computer: [LinkedIn](https://www.linkedin.com/company/eagletrentoracingteam)
+- [Website](https://www.eagletrt.it)
+- [Instagram](https://www.instagram.com/eagletrt)
+- [LinkedIn](https://www.linkedin.com/company/eagletrentoracingteam)
