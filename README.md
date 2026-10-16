@@ -1,4 +1,4 @@
-**Recruitment for E-Agle TRT | Electronics division**
+# Recruitment for E-Agle TRT | Electronics division
 
 Welcome to the recruitment *test* for the electronics team of E-Agle Trento Racing Team.
 
@@ -10,7 +10,7 @@ You will be assigned a task after our first meeting, during which we introduce t
 
 To better understand the task and the competition's structure, we strongly recommend reading the latest rulebook, available on the [Formula Student Germany rules page](https://www.formulastudent.de/fsg/rules).
 
-**What we'll look into**
+## What we'll look into
 
 - Schematic quality: clear connections, consistent labels, tidy organisation into functional blocks and good KiCad practices.
 - Circuit correctness: operation that meets the requirements, suitable components and calculations that support the design.
@@ -18,7 +18,7 @@ To better understand the task and the competition's structure, we strongly recom
 - Documentation quality: clear and complete explanations, calculations and verification, consistent with the submitted schematic.
 - `git` usage: fork, branch, clone, commit, push, pull.
 
-**General instructions**
+## General instructions
 
 - You may use AI tools to help you understand concepts, but you must design the circuit, draw the schematic, carry out the calculations and write the documentation yourself. Any submitted work found to be AI-generated, or that you cannot explain when asked, will result in disqualification and your application will not be considered. Practices that demonstrate your authorship, such as meaningful progress commits and notes explaining your design decisions, will be appreciated.
 - Create a repository on your GitHub account and copy this project into it. If you do not have an account, create one. **Do not clone this repository!**
@@ -34,7 +34,7 @@ To better understand the task and the competition's structure, we strongly recom
 - You can also visit our lab on floor -2 of Povo 2 if we are slow to reply.
 - You have **2 weeks (14 days)** to work on this project. **This is a firm deadline; meeting it is part of the assessment.**
 
-**Links**
+## Links
 
 - [Website](https://www.eagletrt.it)
 - [Instagram](https://www.instagram.com/eagletrt)
