@@ -16,61 +16,65 @@ It also introduces you to the tools we use, so you can get up to speed with the 
 
 ## Assignment
 
-Develop a precharge controller (**controller**) inspired by the DC-link of an electric Formula SAE car.
+Design a hardware-only precharge controller for a Formula SAE electric vehicle. The controller must safely charge the inverter DC-link capacitor before connecting the traction battery directly to the inverter.
 
-Before connecting the battery directly to the inverter, the **controller** must charge the inverter's input capacitor through a resistor to limit the inrush current.
+The design must use discrete analog electronics and logic components. Microcontrollers, FPGAs, CPLDs, and other programmable logic devices are not permitted.
+
+The design must include a complete schematic, component selection, analytical calculations, and functional timing diagrams.
 
 ### Overview
 
-The **controller** has the following specifications:
+#### Traction system
 
-- It is powered by an unstable auxiliary DC supply ranging from 9 V to 17 V.
-- It receives an external **ENABLE** signal referenced to the board's ground: 0 V means disabled and 5 V means enabled.
-- It controls a normally open **main relay** that connects the source directly to the DC-link.
-- It controls a normally open **precharge relay** that connects the source to the DC-link through a **precharge resistor**.
-- It measures the source voltage and the DC-link voltage.
+- Traction-system (TS) voltage: 400–600 V DC.
+- DC-link capacitance: 500 µF nominal.
+- The DC-link capacitor is initially discharged before every precharge attempt.
+- No external load current is drawn during precharge.
+- Maximum continuous current through the main AIRs after precharge: 5 A.
+- The battery source and auxiliary supply share a common low-voltage reference, but the TS and DC-link voltage-sensing circuits must provide the isolation required by the applicable Formula Student rules.
 
-The precharge relay and resistor form a series branch connected in parallel with the main relay. The source, DC-link and auxiliary supply share a common ground.
+#### Controller supplies and signals
 
-The **source** has the following specifications:
-
-- Voltage range: 24 V to 48 V.
-- Its voltage can be considered constant during each precharge attempt.
-
-The **DC-link** has the following specifications:
-
-- Capacitance: 4,700 µF, with a tolerance of ±20%.
-- Initial voltage: 0 V.
-- No load current is drawn during precharge.
-- After precharge, the main relay must support a continuous load current of 5 A.
+- low voltage supply: unregulated 16–24 V DC.
+- Shutdown-circuit supply: 12 V DC.
+- ENABLE input: external CMOS logic signal referenced to controller ground.
+- The auxiliary supply and TS voltage are established before ENABLE is asserted.
+- The shutdown circuit is the safety-related supply and must be incorporated into the relay-control architecture.
+- The controller must remain functional over the full specified auxiliary-supply range.
 
 ### Specs
 
-Assume **ENABLE** is low at power-up. The auxiliary supply must be established and the source voltage present before **ENABLE** rises. An external test setup restores the DC-link to 0 V between attempts; you do not need to design a discharge circuit.
+The controller operates three normally open relays (AIR = accumulator insulaton relay):
+
+- AIR−: connects the negative battery pole to the inverter DC-link negative terminal.
+- AIR+: connects the positive battery pole directly to the inverter DC-link positive terminal.
+- Precharge relay: connects the positive battery pole to the DC-link positive terminal through a series precharge resistor.
+- The precharge branch is connected in parallel with AIR+.
+- All three relays must be selected and driven using a consistent, documented coil-voltage and driver architecture. Relay contacts and -insulation must be suitable for the 400–600 V DC traction system.
+- All three relays coils must be driven by shutdown supply.
+
+Assume **ENABLE** is low at power-up. An external test setup restores the DC-link to 0 V between attempts; you do not need to design a discharge circuit.
 
 The **controller** must implement the following behaviour:
 
-- When **ENABLE** is low, both relays must be open and the completion memory must be reset.
-- When **ENABLE** becomes high, close the precharge relay while keeping the main relay open.
-- Limit the initial precharge current to at most 2 A over the full source voltage range, including the chosen resistor's tolerance.
-- Command the main relay to close when the DC-link voltage reaches a nominal threshold of 95% of the source voltage. The threshold must follow the source voltage: a fixed DC-link voltage threshold is not sufficient.
-- Store completion in hardware and keep the main relay closed until **ENABLE** is removed or the auxiliary supply is lost; continued operation must not depend on the comparator remaining in the same state.
-- **Keep the precharge relay closed for the entire time ENABLE is high**, including after the main relay closes. The closed main relay bypasses the resistor, so a timed handover between the relays is not required.
-- Removing **ENABLE** at any point must reset completion and open both relays. Loss of the auxiliary supply must also cause both relays to open.
+- Must start precharge sequence only if ENABLE is asserted high after checking shutdown supply is present.
+- Must open all relays if enable goes low for more than 50ms
+- Must open all relays after maxium 250ms if shutdown supply or Low voltage supply goes low. 
+- The dc-link must reach 95% of TS voltage within 10 seconds under all specified operating conditions, including component tolerances.
+- No programmable logic is allowed.
+- The precharge current must never exceed 1 A at the maximum source voltage, including the selected resistor's tolerance.
 
-Resetting completion when **ENABLE** is low must take priority over a simultaneous completion signal.
+#### Precharge sequence
 
-Assume the source, capacitor and relays operate correctly and the capacitor charges normally. A timeout or fault latch is not required.
+After ENABLE is asserted and shutdown supply is present:
 
-No programmable logic is allowed.
+- Close AIR−.
+- Close the precharge relay while keeping AIR+ open.
+- Charge the DC-link capacitor through the precharge resistor. 
+- Close AIR+.
 
 Select the relays and precharge resistor. Calculate the voltage-divider values and nominal threshold, initial current including resistor tolerance, nominal charge time, and resistor pulse power, energy and average dissipation. Include capacitor tolerance for the energy rating. Justify relay and driver ratings, the supply's current budget and regulator dissipation.
 
-Assume at most one precharge attempt every 10 s. Use the resistor's pulse-rating data, not only its continuous power rating, to justify the choice. The relays, resistor and DC-link capacitor may be external to the controller PCB, but their connections must be shown in the schematic.
-
-Nominal calculations are sufficient for the voltage-ratio threshold and charge time. State the component tolerances you chose, but a complete worst-case analysis is not required beyond the current and energy checks above. Component voltage, current and thermal ratings must still be suitable for the stated operating ranges.
-
-For verification, treat the relays as ideal switches in functional timing diagrams and neglect contact resistance in the charging calculation. Detailed noise immunity and mechanical switching times are not required. Welded-contact detection and active DC-link discharge are outside the scope of the assignment.
 
 ## KiCad instructions
 
